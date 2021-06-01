@@ -16,10 +16,11 @@ const addTask = () => {
     let valueInputTask = inputTask.value;
     let li = document.createElement('li');
     li.appendChild(document.createTextNode(valueInputTask));
-    li.setAttribute('id', `task-${idTask}`);
-    li.setAttribute('class', 'task-item');
-    idTask++;
+    li.id = `task-${idTask}`;
+    li.className = 'task-item';
+
     tasksTodo.appendChild(li);
+    idTask++;
     inputTask.value = '';
   }
 };
