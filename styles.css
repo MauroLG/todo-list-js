@@ -1,3 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tasks__table {
+  display: flex;
+  width: 500px;
+  justify-content: space-evenly;
+}
+
+.tasks__title {
+  text-align: center;
+}
+
 .emptyErr {
   display: none;
+}
+
+.selected-task {
+  background-color: green;
+  color: white;
+}
+
+li {
+  list-style-type: none;
+  user-select: none;
 }

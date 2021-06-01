@@ -1,6 +1,9 @@
 const inputTask = document.querySelector('.input-task');
 const addTaskBtn = document.querySelector('.add-task');
-const tasksList = document.querySelector('.tasks__list');
+const toDoingBtn = document.querySelector('.to-doing');
+const toDoneBtn = document.querySelector('.to-done');
+const tasksTodo = document.querySelector('.tasks__todo');
+const tasksDoing = document.querySelector('.tasks__doing');
 const emptyErr = document.querySelector('.emptyErr');
 
 let idTask = 0;
@@ -14,10 +17,29 @@ const addTask = () => {
     let li = document.createElement('li');
     li.appendChild(document.createTextNode(valueInputTask));
     li.setAttribute('id', `task-${idTask}`);
+    li.setAttribute('class', 'task-item');
     idTask++;
-    tasksList.appendChild(li);
+    tasksTodo.appendChild(li);
     inputTask.value = '';
   }
 };
 
+const selectTask = (event) => {
+  // console.log(event.target);
+  event.target.classList.toggle('selected-task');
+};
+
+const moveToDoing = () => {
+  let tasksList = document.querySelectorAll('.selected-task');
+  console.log(tasksList[0]);
+  while (tasksList.length > 0) {
+    tasksTodo.removeChild(tasksList[0]);
+    tasksDoing.appendChild(tasksList[0]);
+    tasksList[0].classList.remove('selected-task');
+    tasksList = document.querySelectorAll('.selected-task');
+  }
+};
+
 addTaskBtn.addEventListener('click', addTask);
+tasksTodo.addEventListener('click', selectTask);
+toDoingBtn.addEventListener('click', moveToDoing);

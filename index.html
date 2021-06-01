@@ -8,7 +8,7 @@
     <title>ToDo List</title>
   </head>
   <body>
-    <main>
+    <main class="container">
       <header>ToDo list</header>
       <div>
         <input
@@ -19,8 +19,23 @@
         <p class="emptyErr">No puede agregar tareas vacías...</p>
       </div>
       <section class="tasks">
-        <h3>Tasks</h3>
-        <ul class="tasks__list"></ul>
+        <h3 class="tasks__title">Tasks</h3>
+        <div class="tasks__table">
+          <div class="tasks__column">
+            <h4>ToDo</h4>
+            <ul class="tasks__todo"></ul>
+            <button class="to-doing">To Doing</button>
+          </div>
+          <div class="tasks__column">
+            <h4>Doing</h4>
+            <ul class="tasks__doing"></ul>
+            <button class="to-done">Done!</button>
+          </div>
+          <div class="tasks__column">
+            <h4>Done</h4>
+            <ul class="tasks__done"></ul>
+          </div>
+        </div>
       </section>
     </main>
     <script src="script.js"></script>
