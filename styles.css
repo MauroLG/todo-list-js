@@ -4,26 +4,117 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 10px;
+}
+
 body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-family: 'KoHo', sans-serif;
+  background: linear-gradient(
+    90deg,
+    rgba(22, 74, 65, 1) 0%,
+    rgba(77, 119, 78, 1) 50%,
+    rgba(157, 200, 141, 1) 100%
+  );
+}
+
+h1 {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  margin-bottom: 2.5rem;
+}
+
+h3 {
+  font-size: 2.8rem;
+}
+h4 {
+  font-size: 2.2rem;
+}
+
+.subtitle {
+  background-color: #ccc;
+  width: 100%;
+  height: 3.5rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  font-family: inherit;
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  background: #f1b24a;
+  border-style: none;
+  border-radius: 1rem;
+  width: 150px;
+  height: 3rem;
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
+
+.add-task {
+  width: 190px;
+  height: 3.2rem;
+  margin-top: 0;
+}
+
+.add-menu {
+  display: flex;
+
+  align-items: center;
+  margin-bottom: 2.5rem;
+}
+
+input {
+  font-family: inherit;
+  font-size: 1.9rem;
+  border-radius: 1rem;
+  width: 250px;
+  height: 3.8rem;
+  margin-right: 1.5rem;
+  border-style: none;
+  padding-left: 1rem;
+  box-shadow: 1.5px 1.5px 1px 0.5px black;
+  outline: none;
 }
 
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-size: 2.2rem;
+  margin-top: 10rem;
 }
 
 .tasks__table {
   display: flex;
-  width: 500px;
+  justify-content: space-between;
+  width: 900px;
   justify-content: space-evenly;
+}
+
+.tasks__column {
+  text-align: center;
+  width: 30%;
+  min-height: 400px;
+  background-color: #eeeeee;
+  border-radius: 1rem;
+  padding: 1.2rem 0 1.2rem 0;
+  box-shadow: 1.5px 1.5px 1px 0.5px black;
+  user-select: none;
 }
 
 .tasks__title {
   text-align: center;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
 }
 
 .emptyErr {
@@ -31,11 +122,14 @@ body {
 }
 
 .selected-task {
-  background-color: green;
+  background-color: rgb(3, 187, 123);
   color: white;
 }
 
 li {
   list-style-type: none;
   user-select: none;
+  line-height: 3rem;
+  margin-bottom: 4px;
+  cursor: pointer;
 }
