@@ -67,9 +67,8 @@ button {
 
 .add-menu {
   display: flex;
-
   align-items: center;
-  margin-bottom: 2.5rem;
+  margin-bottom: 1.5rem;
 }
 
 input {
@@ -83,6 +82,11 @@ input {
   padding-left: 1rem;
   box-shadow: 1.5px 1.5px 1px 0.5px black;
   outline: none;
+}
+
+.emptyErr {
+  margin-bottom: 1.5rem;
+  color: rgb(255, 175, 175);
 }
 
 .container {
@@ -117,8 +121,10 @@ input {
   text-transform: uppercase;
 }
 
-.emptyErr {
+.empty-err {
   display: none;
+  margin-bottom: 1.5rem;
+  color: rgb(255, 175, 175);
 }
 
 .selected-task {
@@ -132,4 +138,5 @@ li {
   line-height: 3rem;
   margin-bottom: 4px;
   cursor: pointer;
+  font-size: 1.8rem;
 }

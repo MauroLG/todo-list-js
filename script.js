@@ -5,7 +5,7 @@ const toDoneBtn = document.querySelector('.to-done');
 const tasksTodo = document.querySelector('.tasks__todo');
 const tasksDoing = document.querySelector('.tasks__doing');
 const tasksDone = document.querySelector('.tasks__done');
-const emptyErr = document.querySelector('.emptyErr');
+const emptyErr = document.querySelector('.empty-err');
 
 let idTask = 0;
 
